@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,body{
+    height:100%;
+}
+
+body{
+    min-height: 1500px;
+}
+
+.inline-block{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.spacer {
+    display: inline-block;
+    width: 75%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/*navigation*/
+.header{
+    background-color: black;
+    display: flex;
+    height: 70px;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0
+}
+nav img {
+    max-height: 48px;
+    background-color: white;
+    margin-left: 20px;
+}
+
+nav{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+}
+
+.global-menu {
+    display: flex;
+}
+.global-item{
+    position: relative;
+    margin: 0px 20px;
+    font-size: 15px;
+    padding-top: 25px;
+}
+.global-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* nav a: */
+nav ul li a:link,
+nav ul li a:visited,
+footer ul li a:link,
+footer ul li a:visited {
+    color:  white;
+}
+
+nav ul li a:hover,
+footer ul li a:hover {
+    color: rgb(229, 145, 0);
+}
+
+nav ul li a:active,
+footer ul li a:active {
+    color: rgb(92, 229, 0);
+}
+
+#current-page {
+    color: aquamarine;
+}
+
+/*Dropdown menu*/
+.drpdwn{
+   display: none;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+.global-item:hover .drpdwn {
+    display: block;/* hovered->show*/
+}
+
+.drpdwn-item{
+    background-color: black;
+    height: 60px;
+    position: relative;
+    width: 100px;
+}
+/*MAIN*/
+main h2 {
+    margin-bottom: 16px;
+}
+
+article p {
+    margin-top: 16px;
+}
+
+main {
+    padding: 24px;
+    min-height: 1300px;
+    text-align: center;
+}
+
+/*footer*/
+footer{
+    background-color: #1f1f1f;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer li{
+padding: 25px;
+}
+
+h1, h2, .right li{
+    text-align: center;
+    font-weight: normal;
+}
+
+footer p{
+    text-align: center;
+    margin: 20px;
+    color: white;
+    padding-bottom: 10px;
+}
+
+hr{
+    border: solid white 1px;
+}
+.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: rgb(203, 203, 203);
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /*to display button on top surface*/
+}
+
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: translateY(20%) rotate(-45deg); /*to make arrow using border*/
+}
+
+.pagetop:hover{
+    background-color: #6d6d6d;
+}
